@@ -117,13 +117,14 @@ gulp.task('sass', function(){
             gzip: true
         }))
         .pipe(gulp.dest('build/css'))
+        .pipe(browserSync.reload({stream: true}));
 });
 
 
 
 
 gulp.task('watch', ['sass', 'scripts', 'pug'], function () {
-    gulp.watch('dev/sass/**/*.scss', ['sass', browserSync.reload]);
+    gulp.watch('dev/sass/**/*.scss', ['sass']);
     gulp.watch('dev/js-modules/*.js', ['scripts']);
     gulp.watch('dev/templates/*.pug', ['pug']);
     gulp.watch('build/*.html', browserSync.reload);
