@@ -31,3 +31,9 @@
   color: $c-secondary;
   vertical-align: bottom;
 }
+
+.item__content{
+  padding: 0.3rem 0;
+  font-size: $f-base-size-mobile;
+  color: $c-primary;
+}
