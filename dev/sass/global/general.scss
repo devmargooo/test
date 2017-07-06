@@ -7,10 +7,6 @@ html{
 
 }
 
-h1 {
-  color: red;
-}
-
 .body-wrapper{
   width: 100%;
   max-width: 1920px;
@@ -57,14 +53,4 @@ h1 {
   }
 }
 
-.responsive {
-  display: none;
-}
-
-
-.responsive_below-1200px{
-  @media (max-width:1199px) {
-    display: block;
-  }
-}
 

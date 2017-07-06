@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-// Защита от переполнения
 img {
   display: block;
   max-width: 100%;
@@ -14,7 +13,6 @@ picture {
   height: auto;
 }
 
-// Обнуление отступов по умолчанию у списков
 ul, li {
   margin: 0;
   padding: 0;
