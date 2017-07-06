@@ -1,6 +1,32 @@
+.news{
+  background: inherit;
+}
+
 .item{
   float: left;
   width: 100%;
   padding: 0.5rem 0 1.5rem;
+
+  background: inherit;
   border-bottom: $c-secondary;
+}
+
+.item__title{
+  float: left;
+  font-size: $f-title-size-mobile;
+  color: $c-title;
+  &:active, &:visited{
+    color: $c-title;
+  }
+}
+
+.item__header{
+  line-height: 1.4rem;
+}
+
+.item__date{
+  float: right;
+  font-size: $f-base-size-mobile;
+  color: $c-secondary;
+  vertical-align: bottom;
 }
