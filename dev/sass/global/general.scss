@@ -12,10 +12,13 @@ body{
   max-width: 1200px;
   min-width: 320px;
   padding: 2.5rem;
+
+  font-family: $f-primary;
+  line-height: $f-base-lh;
 }
 
 .body-inner{
-  padding: 2rem 1rem;
+  padding: 0.5rem 1rem;
   background: $c-inner;
   box-shadow: 0 0 40px 10px rgba(0,0,0,0.8);
   @media (min-width: $tablet) {
