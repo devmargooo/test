@@ -2,16 +2,25 @@ html{
   font-size: 62.5%;
 }
 
-.body{
+body{
   width: 100%;
-
+  background: $c-body;
 }
 
 .body-wrapper{
   width: 100%;
-  max-width: 1920px;
+  max-width: 1200px;
   min-width: 320px;
-  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+.body-inner{
+  padding: 2rem 1rem;
+  background: $c-inner;
+  box-shadow: 0 0 40px 10px rgba(0,0,0,0.8);
+  @media (min-width: $tablet) {
+    padding: 5rem 3rem;
+  }
 }
 
 .wrapper{

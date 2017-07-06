@@ -64,6 +64,13 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('build/js'))
 });
 
+gulp.task('img', function () {
+    return gulp.src([
+        'dev/img/*.*'
+    ])
+        .pipe(gulp.dest('build/img'));
+});
+
 gulp.task('svgSprite', function () {
     return gulp.src('dev/icons-svg/*.svg')
         .pipe($.svgSprite({
@@ -123,21 +130,17 @@ gulp.task('sass', function(){
 
 
 
-gulp.task('watch', ['sass', 'scripts', 'pug'], function () {
+gulp.task('watch', ['sass', 'scripts', 'pug', 'img'], function () {
     gulp.watch('dev/sass/**/*.scss', ['sass']);
     gulp.watch('dev/js-modules/*.js', ['scripts']);
     gulp.watch('dev/templates/*.pug', ['pug']);
+    gulp.watch('dev/img/*.*', ['img']);
     gulp.watch('build/*.html', browserSync.reload);
 });
 
 
-gulp.task('build', ['sass', 'scripts', 'pug', 'svgSprite'], function() {
+gulp.task('build', ['sass', 'scripts', 'pug', 'img'], function() {
 
-    gulp.src('dev/fonts/**/*')
-        .pipe(gulp.dest('build/fonts'));
-
-    gulp.src('dev/img-src/*.*')
-        .pipe(gulp.dest('build/img'));
 
 });
 
