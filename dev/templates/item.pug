@@ -2,5 +2,7 @@ li.item
     header.item__header.clearfix
         a.item__title(href="#")= title
         a.item__date(href="#")= date
-    img(class="item__img" src= imgsrc)
-    p(class="item__content")= content
+    a(class="item__img-wrapper" href="#")
+        img(class="item__img" src= imgsrc)
+    a(class="item__content-wrapper" href="#")
+        p(class="item__content")= content

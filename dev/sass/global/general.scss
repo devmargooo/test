@@ -18,7 +18,7 @@ body{
 }
 
 .body-inner{
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 2rem;
   background: $c-inner;
   box-shadow: 0 0 40px 10px rgba(0,0,0,0.8);
   @media (min-width: $tablet) {

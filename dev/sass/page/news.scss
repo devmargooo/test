@@ -6,12 +6,19 @@
   float: left;
   width: 100%;
   background: inherit;
+  @media (min-width: $tablet) {
+    width: 50%;
+    padding: 2rem 1rem;
+  }
 }
 
 .item{
-  padding: 1.5rem 0 1.5rem;
+  padding: 1.5rem 0;
   background: inherit;
   border-bottom: 1px solid $c-secondary;
+  @media (min-width: $tablet) {
+
+  }
 }
 
 .item__title{
@@ -36,6 +43,7 @@
 }
 
 .item__content{
+  height: $paragraph-height;
   padding: 0.3rem 0;
   font-size: $f-base-size-mobile;
   color: $c-primary;
