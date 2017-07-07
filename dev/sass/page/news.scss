@@ -1,14 +1,26 @@
 .news{
   background: inherit;
+  overflow: hidden;
+  @media (min-width: $tablet) {
+    margin-top: -3rem;
+  }
 }
 
 .cell{
+  position: relative;
   float: left;
   width: 100%;
   background: inherit;
   @media (min-width: $tablet) {
     width: 50%;
+    top: 3rem;
     padding: 2rem 1rem;
+  }
+  @media (min-width: $desktop) {
+    width: calc(100%/3);
+  }
+  &:last-child .item{
+    border: none;
   }
 }
 
@@ -16,6 +28,9 @@
   padding: 1.5rem 0;
   background: inherit;
   border-bottom: 1px solid $c-secondary;
+  &:hover{
+    opacity: 0.8;
+  }
 }
 
 .item__title{

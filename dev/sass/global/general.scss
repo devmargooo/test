@@ -11,8 +11,8 @@ body{
   width: 100%;
   max-width: 1200px;
   min-width: 320px;
+  margin: 0 auto;
   padding: 2.5rem;
-
   font-family: $f-primary;
   line-height: $f-base-lh;
 }
@@ -23,25 +23,6 @@ body{
   box-shadow: 0 0 40px 10px rgba(0,0,0,0.8);
   @media (min-width: $tablet) {
     padding: 5rem 3rem;
-  }
-}
-
-.wrapper{
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  @media(min-width: 450px){
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  @media (min-width: 1200px) {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  @media (min-width: 1920px) {
-    padding-left: 40px;
-    padding-right: 40px;
   }
 }
 
