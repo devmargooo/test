@@ -16,9 +16,6 @@
   padding: 1.5rem 0;
   background: inherit;
   border-bottom: 1px solid $c-secondary;
-  @media (min-width: $tablet) {
-
-  }
 }
 
 .item__title{
@@ -27,6 +24,9 @@
   color: $c-title;
   &:active, &:visited{
     color: $c-title;
+  }
+  @media (min-width: $tablet) {
+    font-size: $f-title-size;
   }
 }
 
@@ -40,11 +40,18 @@
   font-size: $f-base-size-mobile;
   color: $c-secondary;
   vertical-align: bottom;
+  @media (min-width: $tablet) {
+    font-size: $f-base-size;
+  }
 }
 
 .item__content{
-  height: $paragraph-height;
+  height: $paragraph-height-mobile;
   padding: 0.3rem 0;
   font-size: $f-base-size-mobile;
   color: $c-primary;
+  @media (min-width: $tablet) {
+    font-size: $f-base-size;
+    height: $paragraph-height;
+  }
 }
