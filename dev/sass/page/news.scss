@@ -2,13 +2,16 @@
   background: inherit;
 }
 
-.item{
+.cell{
   float: left;
   width: 100%;
-  padding: 0.5rem 0 1.5rem;
-
   background: inherit;
-  border-bottom: $c-secondary;
+}
+
+.item{
+  padding: 1.5rem 0 1.5rem;
+  background: inherit;
+  border-bottom: 1px solid $c-secondary;
 }
 
 .item__title{
