@@ -28,7 +28,7 @@ var $ = {
 gulp.task('browser-sync', function () {
     browserSync({
         server: {
-            baseDir: 'build'
+            baseDir: 'docs'
         },
         startPath: 'index.html'
     });
@@ -39,7 +39,7 @@ gulp.task('pug', function() {
         .pipe(pug({
             pretty: '\t'
         }))
-        .pipe(gulp.dest('build'))
+        .pipe(gulp.dest('docs'))
         .pipe(browserSync.reload({
             stream: true
         }));
@@ -61,14 +61,14 @@ gulp.task('scripts', function() {
             showFiles: true,
             gzip: true
         }))
-        .pipe(gulp.dest('build/js'))
+        .pipe(gulp.dest('docs/js'))
 });
 
 gulp.task('img', function () {
     return gulp.src([
         'dev/img/*.*'
     ])
-        .pipe(gulp.dest('build/img'));
+        .pipe(gulp.dest('docs/img'));
 });
 
 gulp.task('svgSprite', function () {
@@ -97,7 +97,7 @@ gulp.task('svgSprite', function () {
                 mapname: "icons"
             }
         }))
-        .pipe(gulp.dest('build/img/'))
+        .pipe(gulp.dest('docs/img/'))
         .pipe(browserSync.reload({stream: true}));
 });
 
@@ -113,7 +113,7 @@ gulp.task('sass', function(){
         .pipe(size({
             showFiles: true
         }))
-        .pipe(gulp.dest('build/css'))
+        .pipe(gulp.dest('docs/css'))
         .pipe(csso())
         .pipe(rename({suffix: '.min'}))
         .pipe(size({
@@ -123,7 +123,7 @@ gulp.task('sass', function(){
             showFiles: true,
             gzip: true
         }))
-        .pipe(gulp.dest('build/css'))
+        .pipe(gulp.dest('docs/css'))
         .pipe(browserSync.reload({stream: true}));
 });
 
@@ -135,15 +135,15 @@ gulp.task('watch', ['sass', 'scripts', 'pug', 'img'], function () {
     gulp.watch('dev/js-modules/*.js', ['scripts']);
     gulp.watch('dev/templates/*.pug', ['pug']);
     gulp.watch('dev/img/*.*', ['img']);
-    gulp.watch('build/*.html', browserSync.reload);
+    gulp.watch('docs/*.html', browserSync.reload);
 });
 
 
-gulp.task('build', ['sass', 'scripts', 'pug', 'img'], function() {
+gulp.task('docs', ['sass', 'scripts', 'pug', 'img'], function() {
 
 
 });
 
 
-gulp.task('default', ['watch', 'build', 'browser-sync']);
+gulp.task('default', ['watch', 'docs', 'browser-sync']);
 
