@@ -2,3 +2,5 @@ node_modules/
 .sass-cache/
 .idea/
 dev/.DS_Store
+docs/.DS_Store
+build
